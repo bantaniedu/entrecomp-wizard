@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ideas-color: #3498DB;
+  --resources-color: #E67E22;
+  --action-color: #27AE60;
+  --entrecomp-blue: #1e3a5f;
+  --entrecomp-gold: #c9a227;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900;
+}
+
+/* EntreComp-themed header */
+.entrecomp-header {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+}
+
+.competence-wheel {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.upload-zone {
+  @apply border-2 border-dashed border-gray-300 rounded-xl p-8 text-center cursor-pointer transition-all;
+}
+
+.upload-zone:hover {
+  @apply border-blue-400 bg-blue-50;
+}
+
+.upload-zone.dragover {
+  @apply border-blue-500 bg-blue-100;
+}
+
+.result-card {
+  @apply bg-white rounded-lg shadow-md p-6 mb-4;
+}
+
+.competence-tag {
+  @apply inline-block px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2;
+}
+
+.competence-tag.ideas {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.competence-tag.resources {
+  @apply bg-orange-100 text-orange-800;
+}
+
+.competence-tag.action {
+  @apply bg-green-100 text-green-800;
+}
+
+.confidence-strong {
+  @apply text-green-600;
+}
+
+.confidence-moderate {
+  @apply text-yellow-600;
+}
+
+.confidence-weak {
+  @apply text-red-600;
+}
+
+.loading-spinner {
+  @apply animate-spin h-8 w-8 border-4 border-blue-500 border-t-transparent rounded-full;
+}
